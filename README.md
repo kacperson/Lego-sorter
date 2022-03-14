@@ -1,5 +1,5 @@
 # Lego-sorter
-Program clasyfikujący klocki oparty o uczenie maszynowe.
+Program klasyfikujący klocki oparty o uczenie maszynowe.
 
 ## Działanie
 - Podajemy klocek przed kamerę 
