@@ -1,7 +1,8 @@
 import cv2
-import image_compare as ic
+import src.image_compare as ic
 from PIL import Image, ImageEnhance
 import numpy as np
+
 
 def from_cv_to_PIL(image):
     return Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
@@ -10,14 +11,14 @@ def from_cv_to_PIL(image):
 def from_PIL_to_cv(image):
     return cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
 
-def cam_det(width = 64, heigh = 64, tolerance = 0):
 
+def cam_det(width=64, height=64, tolerance=0):
     vid = cv2.VideoCapture(0)
     vid.set(3, width)
-    vid.set(4, heigh)
-    oldImg = Image.new("RGB", (width, heigh))
+    vid.set(4, height)
+    oldImg = Image.new("RGB", (width, height))
     oldDifferenceIndicator = 0.9
-    while (True):
+    while True:
 
         ret, newFrame = vid.read()
 
@@ -37,4 +38,6 @@ def cam_det(width = 64, heigh = 64, tolerance = 0):
 
     cv2.destroyAllWindows()
 
-cam_det()
+
+if __name__ == "__main__":
+    cam_det()
