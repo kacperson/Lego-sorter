@@ -54,4 +54,5 @@ class bricksDB:
         self.conn.commit()
         return
 
-
+    def del_brick(self, brick):
+        
