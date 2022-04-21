@@ -2,6 +2,8 @@ import cv2
 import image_compare as ic
 from PIL import Image, ImageEnhance
 import numpy as np
+import time
+
 
 def from_cv_to_PIL(image):
     return Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
@@ -10,30 +12,45 @@ def from_cv_to_PIL(image):
 def from_PIL_to_cv(image):
     return cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
 
-def cam_det(width = 256, heigh = 256, tolerance = 0.01):
+
+def increase_brightness(image, val):
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    h, s, v = cv2.split(hsv)
+    lim = 255 - val
+    v[v > lim] = 255
+    v[v <= lim] += val
+    final_hsv = cv2.merge((h, s, v))
+    image = cv2.cvtColor(final_hsv, cv2.COLOR_HSV2BGR)
+    return image
+
+
+def cam_det(width=256, height=256, tolerance=0.005):
 
     vid = cv2.VideoCapture(0)
     vid.set(3, width)
-    vid.set(4, heigh)
-    oldImg = Image.new("RGB", (width, heigh))
+    vid.set(4, height)
+    oldImg = Image.new("RGB", (width, height))
     oldDifferenceIndicator = 0
+
     while (True):
 
         ret, newFrame = vid.read()
-
+        newFrame = increase_brightness(newFrame, 50)
         newImg = from_cv_to_PIL(newFrame)
-        newImg = ImageEnhance.Brightness(newImg)
-        newImg.enhance(1)
-        newImg = newImg.image
-        view = from_PIL_to_cv(newImg)
-        cv2.imshow('win', view)
+        cv2.imshow('win', newFrame)
 
-        newDifferenceIndicator = ic.compareImages(newImg, oldImg)
-        #print(newDifferenceIndicator)
+        newDifferenceIndicator = ic.compare_images(newImg, oldImg)
+
+        #if the difference is greater than some  tolerance take a screenshot
         if abs(newDifferenceIndicator - oldDifferenceIndicator) > tolerance or oldDifferenceIndicator == 0:
             print(abs(newDifferenceIndicator - oldDifferenceIndicator))
             oldDifferenceIndicator = newDifferenceIndicator
+            time.sleep(0.5)
+            #save picture
+            ret, newFrame = vid.read()
+            newImg = from_cv_to_PIL(newFrame)
             newImg.save("../database/brick.png", bitmap_format="png")
+
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
