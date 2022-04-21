@@ -1,8 +1,9 @@
 import cv2
 import image_compare as ic
-from PIL import Image, ImageEnhance
+from PIL import Image
 import numpy as np
 import time
+import object_detection as od
 
 
 def from_cv_to_PIL(image):
@@ -35,7 +36,7 @@ def cam_det(width=256, height=256, tolerance=0.005):
     while (True):
 
         ret, newFrame = vid.read()
-        newFrame = increase_brightness(newFrame, 50)
+        newFrame = increase_brightness(newFrame, 40)
         newImg = from_cv_to_PIL(newFrame)
         cv2.imshow('win', newFrame)
 
@@ -45,14 +46,17 @@ def cam_det(width=256, height=256, tolerance=0.005):
         if abs(newDifferenceIndicator - oldDifferenceIndicator) > tolerance or oldDifferenceIndicator == 0:
             print(abs(newDifferenceIndicator - oldDifferenceIndicator))
             oldDifferenceIndicator = newDifferenceIndicator
-            time.sleep(0.5)
+            time.sleep(0.2)
             #save picture
             ret, newFrame = vid.read()
-            newImg = from_cv_to_PIL(newFrame)
-            newImg.save("../database/brick.png", bitmap_format="png")
+            croppedImg, view = od.object_det(newFrame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+        cv2.imwrite("../database/brick.png", croppedImg)
+
+        cv2.imshow('win', view)
 
     cv2.destroyAllWindows()
 
