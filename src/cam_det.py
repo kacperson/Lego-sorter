@@ -60,4 +60,3 @@ def cam_det(width=256, height=256, tolerance=0.005):
 
     cv2.destroyAllWindows()
 
-cam_det()
