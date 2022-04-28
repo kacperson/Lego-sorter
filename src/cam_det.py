@@ -25,9 +25,8 @@ def increase_brightness(image, val):
     return image
 
 
-def cam_det(width=256, height=256, tolerance=0.005):
+def cam_det(vid=cv2.VideoCapture(0), width=256, height=256, tolerance=0.005):
 
-    vid = cv2.VideoCapture(0)
     vid.set(3, width)
     vid.set(4, height)
     oldImg = Image.new("RGB", (width, height))
@@ -56,6 +55,4 @@ def cam_det(width=256, height=256, tolerance=0.005):
 
         cv2.imwrite("../database/brick.png", croppedImg)
 
-        cv2.imshow('win', view)
 
-    cv2.destroyAllWindows()
