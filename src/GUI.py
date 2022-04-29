@@ -2,7 +2,7 @@ import multiprocessing
 import tkinter as tk
 import cv2
 from PIL import Image, ImageTk
-from src.cam_det import cam_det
+from cam_det import cam_det
 
 
 def gui_mainloop(the_q, the_e):
@@ -32,9 +32,9 @@ def gui_mainloop(the_q, the_e):
             self.add_button = tk.Button(self.info_container, text="Add to database")
             self.add_button.grid(column=1, row=3, columnspan=1)
 
-            """self.camera = cv2.VideoCapture(0)
+            self.camera = cv2.VideoCapture(0)
             self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 64)
-            self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 64)"""
+            self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 64)
             self.camera_label = tk.Label(self.camera_container)
             self.camera_label.grid()
 
@@ -61,6 +61,7 @@ def cam_loop(the_q, event):
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
+
     while True:
         cam_det(cap)
         _, img = cap.read()
@@ -82,9 +83,12 @@ if __name__ == "__main__":
         p_cap.start()
         p_gui.start()
 
+
         p_cap.join()
         p_gui.join()
+
 
     except KeyboardInterrupt:
         p_cap.terminate()
         p_gui.terminate()
+
