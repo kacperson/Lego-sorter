@@ -2,6 +2,7 @@ import multiprocessing
 import tkinter as tk
 import cv2
 from PIL import Image, ImageTk
+from src.cam_det import cam_det
 
 
 def gui_mainloop(the_q, the_e):
@@ -56,11 +57,12 @@ def gui_mainloop(the_q, the_e):
 
 def cam_loop(the_q, event):
     width, height = 64, 64
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
     while True:
+        cam_det(cap)
         _, img = cap.read()
         if img is not None:
             img = cv2.flip(img, 1)

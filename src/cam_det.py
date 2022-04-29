@@ -25,7 +25,7 @@ def increase_brightness(image, val):
     return image
 
 
-def cam_det(vid=cv2.VideoCapture(0), width=256, height=256, tolerance=0.005):
+def cam_det(vid=cv2.VideoCapture(1), width=256, height=256, tolerance=0.005):
 
     vid.set(3, width)
     vid.set(4, height)
@@ -37,7 +37,7 @@ def cam_det(vid=cv2.VideoCapture(0), width=256, height=256, tolerance=0.005):
         ret, newFrame = vid.read()
         newFrame = increase_brightness(newFrame, 40)
         newImg = from_cv_to_PIL(newFrame)
-        cv2.imshow('win', newFrame)
+        #cv2.imshow('win', newFrame)
 
         newDifferenceIndicator = ic.compare_images(newImg, oldImg)
 
@@ -54,5 +54,4 @@ def cam_det(vid=cv2.VideoCapture(0), width=256, height=256, tolerance=0.005):
             break
 
         cv2.imwrite("../database/brick.png", croppedImg)
-
 
