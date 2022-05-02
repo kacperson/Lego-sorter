@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="Fixed gui">
-      <change afterPath="$PROJECT_DIR$/CNN/Data_Generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CNN/Split_Data.py" afterDir="false" />
+    <list default="true" id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="CNN model and split data to train, test and validation sets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/CNN_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/CNN_Model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,7 @@
       <recent name="C:\Users\Mateusz\PycharmProjects\Lego-sorter\CNN\Data" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.CNN_Model">
     <configuration name="CNN_Model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,7 +202,10 @@
       <workItem from="1651328424037" duration="202000" />
       <workItem from="1651328676251" duration="447000" />
       <workItem from="1651400310221" duration="1191000" />
-      <workItem from="1651401525029" duration="2442000" />
+      <workItem from="1651401525029" duration="2641000" />
+      <workItem from="1651429689872" duration="836000" />
+      <workItem from="1651480571544" duration="2923000" />
+      <workItem from="1651484790236" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="First GUI, camera bug need to be fixed">
       <created>1650113852339</created>
@@ -219,7 +221,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650803967756</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="CNN model and split data to train, test and validation sets">
+      <created>1651404878017</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651404878017</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CNN model and split data to train, test and validation sets">
+      <created>1651404899449</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651404899449</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +255,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First GUI, camera bug need to be fixed" />
     <MESSAGE value="Fixed gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed gui" />
+    <MESSAGE value="CNN model and split data to train, test and validation sets" />
+    <option name="LAST_COMMIT_MESSAGE" value="CNN model and split data to train, test and validation sets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -258,5 +275,6 @@
     <SUITE FILE_PATH="coverage/Lego_sorter$Split_Data.coverage" NAME="Split_Data Coverage Results" MODIFIED="1651402360871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
     <SUITE FILE_PATH="coverage/Lego_sorter$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1650810578919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/client" />
     <SUITE FILE_PATH="coverage/Lego_sorter$cam_det.coverage" NAME="cam_det Coverage Results" MODIFIED="1650810616977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model.coverage" NAME="CNN_Model Coverage Results" MODIFIED="1651484813823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
   </component>
 </project>
