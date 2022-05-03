@@ -65,6 +65,16 @@ class bricksDB:
         self.conn.commit()
         return
 
+    def find_brick(self, brick):
+        select = f"SELECT Bricks.qty, Inventory.shelf_number " \
+                 f"FROM Bricks " \
+                 f"WHERE brick_number = {brick} " \
+                 f"INNER JOIN Assignments ON Bricks.id_brick=Assignments.id_brick " \
+                 f"INNER JOIN Inventory ON Assignments."
+        self.stat.execute(select)
+        brickData = self.stat.fetchall()
+
+
 if __name__ == "__main__":
     db = bricksDB()
     db.create_db()

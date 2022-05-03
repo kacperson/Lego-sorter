@@ -2,7 +2,7 @@ import cv2
 
 #acceptable opencv format
 def object_det(image):
-    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     binary = cv2.threshold(gray, 110, 255, cv2.THRESH_BINARY_INV)[1]
 
