@@ -25,38 +25,31 @@ def increase_brightness(image, val):
     return image
 
 
-def cam_det(width=256, height=256, tolerance=0.005):
+def cam_det(vid=cv2.VideoCapture(1), width=256, height=256, tolerance=0.005):
 
-    vid = cv2.VideoCapture(0)
     vid.set(3, width)
     vid.set(4, height)
     oldImg = Image.new("RGB", (width, height))
     oldDifferenceIndicator = 0
 
-    while (True):
+    ret, newFrame = vid.read()
+    newFrame = increase_brightness(newFrame, 40)
+    newImg = from_cv_to_PIL(newFrame)
+    #cv2.imshow('win', newFrame)
 
+    newDifferenceIndicator = ic.compare_images(newImg, oldImg)
+
+    #if the difference is greater than some  tolerance take a screenshot
+    if abs(newDifferenceIndicator - oldDifferenceIndicator) > tolerance or oldDifferenceIndicator == 0:
+        print(abs(newDifferenceIndicator - oldDifferenceIndicator))
+        oldDifferenceIndicator = newDifferenceIndicator
+        time.sleep(0.2)
+        #save picture
         ret, newFrame = vid.read()
-        newFrame = increase_brightness(newFrame, 40)
-        newImg = from_cv_to_PIL(newFrame)
-        cv2.imshow('win', newFrame)
+        croppedImg, view = od.object_det(newFrame)
 
-        newDifferenceIndicator = ic.compare_images(newImg, oldImg)
+    #if cv2.waitKey(1) & 0xFF == ord('q'):
+    #   break
 
-        #if the difference is greater than some  tolerance take a screenshot
-        if abs(newDifferenceIndicator - oldDifferenceIndicator) > tolerance or oldDifferenceIndicator == 0:
-            print(abs(newDifferenceIndicator - oldDifferenceIndicator))
-            oldDifferenceIndicator = newDifferenceIndicator
-            time.sleep(0.2)
-            #save picture
-            ret, newFrame = vid.read()
-            croppedImg, view = od.object_det(newFrame)
-
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-        cv2.imwrite("../database/brick.png", croppedImg)
-
-        cv2.imshow('win', view)
-
-    cv2.destroyAllWindows()
+    cv2.imwrite("../database/brick.png", croppedImg)
 

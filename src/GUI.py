@@ -2,7 +2,7 @@ import multiprocessing
 import tkinter as tk
 import cv2
 from PIL import Image, ImageTk
-from src.brick_db import update
+from cam_det import cam_det
 
 
 def gui_mainloop(the_q, the_e):
@@ -29,9 +29,12 @@ def gui_mainloop(the_q, the_e):
             self.model_text.grid(column=1, row=0, columnspan=1)
             self.case_text.grid(column=1, row=1, columnspan=1)
             self.number_text.grid(column=1, row=2, columnspan=1)
-            self.add_button = tk.Button(self.info_container, text="Add to database", command=self.get_input)
+            self.add_button = tk.Button(self.info_container, text="Add to database")
             self.add_button.grid(column=1, row=3, columnspan=1)
 
+            self.camera = cv2.VideoCapture(0)
+            self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 64)
+            self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 64)
             self.camera_label = tk.Label(self.camera_container)
             self.camera_label.grid()
 
@@ -42,15 +45,6 @@ def gui_mainloop(the_q, the_e):
             self.camera_label.imgtk = imgtk
             self.camera_label.configure(image=imgtk)
             self.camera_label.after(10, self.show_frames, the_q, the_e)
-
-        def get_input(self):
-            model = self.model_text.get("1.0", tk.END)
-            case = self.case_text.get("1.0", tk.END)
-            number = self.number_text.get("1.0", tk.END)
-            update(model, case, number)
-
-        def put_text(self):
-            self.number_text.insert("1", "1.0")
 
     root = tk.Tk()
     root.title("LEGO sorter")
@@ -63,11 +57,13 @@ def gui_mainloop(the_q, the_e):
 
 def cam_loop(the_q, event):
     width, height = 64, 64
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
+
     while True:
+        cam_det(cap)
         _, img = cap.read()
         if img is not None:
             img = cv2.flip(img, 1)
@@ -87,9 +83,12 @@ if __name__ == "__main__":
         p_cap.start()
         p_gui.start()
 
+
         p_cap.join()
         p_gui.join()
+
 
     except KeyboardInterrupt:
         p_cap.terminate()
         p_gui.terminate()
+
