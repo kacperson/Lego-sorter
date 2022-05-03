@@ -1,5 +1,7 @@
 from tensorflow import keras
 
+
+
 data_generator = keras.preprocessing.image.ImageDataGenerator()
 train = data_generator.flow_from_directory(directory='Data/train', class_mode='categorical', batch_size=32)
 validation = data_generator.flow_from_directory(directory='Data/validation', class_mode='categorical', batch_size=32)
@@ -12,11 +14,11 @@ model.add(keras.layers.Conv2D(128, (3, 3), activation='relu'))
 model.add(keras.layers.MaxPooling2D((2, 2)))
 model.add(keras.layers.Conv2D(128, (3, 3), activation='relu'))
 model.add(keras.layers.Flatten())
-model.add(keras.layers.Dense(128, activation='relu'))
+model.add(keras.layers.Dense(400, activation='relu'))
 model.add(keras.layers.Dense(200))
 model.summary()
 model.compile(optimizer=keras.optimizers.SGD(learning_rate=1e-3), loss=keras.losses.SparseCategoricalCrossentropy(
-    from_logits=True), metrics=[keras.metrics.Accuracy(), keras.metrics.FalseNegatives()])
+    from_logits=True), metrics=keras.metrics.Accuracy())
 #batchX, batchy = train.next()
 #print('Batch shape=%s, min=%.3f, max=%.3f' % (batchX.shape, batchX.min(), batchX.max()))
 

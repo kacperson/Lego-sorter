@@ -24,3 +24,6 @@ def create_db():
     stat.execute(create_assignments)
     stat.execute(create_images)
 
+
+def update(id_brick, id_shelf, number_of_bricks):
+    pass
