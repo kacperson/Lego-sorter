@@ -47,13 +47,10 @@ def gui_mainloop(the_q, the_e):
             model = self.model_text.get("1.0", tk.END)
             case = self.case_text.get("1.0", tk.END)
             number = self.number_text.get("1.0", tk.END)
-            print(model)
             update(model, case, number)
 
         def put_text(self):
             self.number_text.insert("1", "1.0")
-
-
 
     root = tk.Tk()
     root.title("LEGO sorter")
