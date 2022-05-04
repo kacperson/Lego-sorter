@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="text input GUI, update db">
+    <list default="true" id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="GUI update">
+      <change afterPath="$PROJECT_DIR$/CNN/prediction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/CNN_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/CNN_Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/GUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +189,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.CNN_Model (1)" />
+      <item itemvalue="Python.CNN_Model" />
+      <item itemvalue="Python.GUI" />
+      <item itemvalue="Python.Split_Data" />
+      <item itemvalue="Python.cam_det" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.CNN_Model (1)" />
@@ -240,6 +247,9 @@
       <workItem from="1651567485834" duration="3662000" />
       <workItem from="1651575381620" duration="1143000" />
       <workItem from="1651576541961" duration="910000" />
+      <workItem from="1651586172174" duration="143000" />
+      <workItem from="1651586496098" duration="55000" />
+      <workItem from="1651653941980" duration="378000" />
     </task>
     <task id="LOCAL-00001" summary="First GUI, camera bug need to be fixed">
       <created>1650113852339</created>
