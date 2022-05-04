@@ -1,4 +1,5 @@
 from tensorflow import keras
+import pickle
 
 
 data_generator = keras.preprocessing.image.ImageDataGenerator()
@@ -22,3 +23,6 @@ model.compile(optimizer=keras.optimizers.SGD(), loss=keras.losses.sparse_categor
 history = model.fit(train, steps_per_epoch=16, validation_data=validation, validation_steps=8)
 
 loss = model.evaluate_generator(test, steps=24)
+
+filename = "CNN_Model_final.sav"
+pickle.dump(model, open(filename, 'rb'))
