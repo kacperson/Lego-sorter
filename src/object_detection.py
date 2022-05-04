@@ -11,6 +11,8 @@ def object_det(image):
     try:
         c = max(contours, key=cv2.contourArea)
         (x, y, w, h) = cv2.boundingRect(c)
+        #view = cv2.cvtColor(view, cv2.COLOR_BGR2RGBA)
+
         #view = cv2.rectangle(view, (x, y), (x + w, y + h), (0, 255, 0), 2)
         margin = 0
         if y > 10 and x > 10:

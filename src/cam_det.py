@@ -25,12 +25,12 @@ def increase_brightness(image, val):
     return image
 
 
-def cam_det(vid=cv2.VideoCapture(1), width=256, height=256, tolerance=0.005):
+def cam_det(vid=cv2.VideoCapture(0), width=256, height=256, tolerance=0.005, oldDifferenceIndicator=0):
 
     vid.set(3, width)
     vid.set(4, height)
     oldImg = Image.new("RGB", (width, height))
-    oldDifferenceIndicator = 0
+
 
     ret, newFrame = vid.read()
     newFrame = increase_brightness(newFrame, 40)
@@ -43,13 +43,13 @@ def cam_det(vid=cv2.VideoCapture(1), width=256, height=256, tolerance=0.005):
     if abs(newDifferenceIndicator - oldDifferenceIndicator) > tolerance or oldDifferenceIndicator == 0:
         print(abs(newDifferenceIndicator - oldDifferenceIndicator))
         oldDifferenceIndicator = newDifferenceIndicator
-        time.sleep(0.2)
+        time.sleep(0.3)
         #save picture
         ret, newFrame = vid.read()
         croppedImg, view = od.object_det(newFrame)
-
+        cv2.imwrite("../CNN/brick.png", croppedImg)
     #if cv2.waitKey(1) & 0xFF == ord('q'):
     #   break
 
-    cv2.imwrite("../database/brick.png", croppedImg)
+    return oldDifferenceIndicator
 

@@ -56,14 +56,14 @@ def gui_mainloop(the_q, the_e):
 
 
 def cam_loop(the_q, event):
-    width, height = 64, 64
-    cap = cv2.VideoCapture(1)
+    width, height = 256, 256
+    cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
-
+    oldDifferenceindicator = 0
 
     while True:
-        cam_det(cap)
+        oldDifferenceindicator = cam_det(cap, oldDifferenceIndicator=oldDifferenceindicator)
         _, img = cap.read()
         if img is not None:
             img = cv2.flip(img, 1)
