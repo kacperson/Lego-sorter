@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="GUI update" />
+    <list default="true" id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Mateusz" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +54,7 @@
       <recent name="C:\Users\Mateusz\PycharmProjects\Lego-sorter\CNN\Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.CNN_Model (1)">
+  <component name="RunManager" selected="Python.GUI">
     <configuration name="CNN_Model (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,9 +196,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GUI" />
         <item itemvalue="Python.cam_det" />
         <item itemvalue="Python.Split_Data" />
-        <item itemvalue="Python.GUI" />
         <item itemvalue="Python.CNN_Model" />
         <item itemvalue="Python.CNN_Model (1)" />
       </list>
@@ -249,6 +251,9 @@
       <workItem from="1651655585476" duration="38000" />
       <workItem from="1651655634057" duration="4000" />
       <workItem from="1651655690467" duration="9000" />
+      <workItem from="1651658094302" duration="142000" />
+      <workItem from="1651678276853" duration="805000" />
+      <workItem from="1651683970744" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="First GUI, camera bug need to be fixed">
       <created>1650113852339</created>
@@ -292,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651569484118</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix">
+      <created>1651658253978</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1651658253978</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +327,8 @@
     <MESSAGE value="CNN model and split data to train, test and validation sets" />
     <MESSAGE value="model update" />
     <MESSAGE value="text input GUI, update db" />
-    <option name="LAST_COMMIT_MESSAGE" value="text input GUI, update db" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
