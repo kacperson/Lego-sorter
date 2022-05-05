@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="fix">
+    <list default="true" id="dbaaf938-c6e2-4c5f-8345-b50b651b54ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CNN/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cam_det.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cam_det.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/object_detection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,46 +20,36 @@
       </list>
     </option>
   </component>
-  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
-    <envs>
-      <env key="FLASK_APP" value="app" />
-    </envs>
-    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
-    <option name="myEnvs">
-      <map>
-        <entry key="FLASK_APP" value="app" />
-      </map>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="27bgaTcZMPKQpWRoAL4yLCDXreg" />
+  <component name="ProjectId" id="28iFCzCUtKxEmcvZAKyVdNSE5wA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CNN" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Lego-sorter\CNN" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Mateusz\PycharmProjects\Lego-sorter\CNN\Data" />
+      <recent name="D:\Lego-sorter\CNN" />
+      <recent name="D:\Lego-sorter\CNN\brick" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.GUI">
-    <configuration name="CNN_Model (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.CNN_Model">
+    <configuration name="CNN_Model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -77,50 +71,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CNN_Model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lego-sorter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CNN" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Mateusz\PycharmProjects\Lego-sorter\CNN\CNN_Model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CNN_Model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lego-sorter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CNN" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Mateusz\PycharmProjects\Lego-sorter\CNN\CNN_Model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,12 +79,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/GUI.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/GUI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cam_det" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="brick_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -178,7 +128,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/cam_det.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/brick_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,124 +137,49 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.CNN_Model (1)" />
-      <item itemvalue="Python.CNN_Model" />
-      <item itemvalue="Python.GUI" />
-      <item itemvalue="Python.Split_Data" />
-      <item itemvalue="Python.cam_det" />
-    </list>
+    <configuration name="prediction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lego-sorter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CNN" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CNN/prediction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.GUI" />
-        <item itemvalue="Python.cam_det" />
-        <item itemvalue="Python.Split_Data" />
         <item itemvalue="Python.CNN_Model" />
-        <item itemvalue="Python.CNN_Model (1)" />
+        <item itemvalue="Python.prediction" />
+        <item itemvalue="Python.GUI" />
+        <item itemvalue="Python.brick_class" />
+        <item itemvalue="Python.Split_Data" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bcd17028-e8ef-4c49-862a-c5e69bb7d616" name="Changes" comment="" />
-      <created>1649594263046</created>
+      <changelist id="dbaaf938-c6e2-4c5f-8345-b50b651b54ad" name="Changes" comment="" />
+      <created>1651691375141</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1649594263046</updated>
-      <workItem from="1649594264392" duration="1631000" />
-      <workItem from="1649750635801" duration="5000" />
-      <workItem from="1649772312881" duration="2000" />
-      <workItem from="1649939064725" duration="2846000" />
-      <workItem from="1650035342100" duration="4029000" />
-      <workItem from="1650110498296" duration="3254000" />
-      <workItem from="1650566560417" duration="24000" />
-      <workItem from="1650799506816" duration="4364000" />
-      <workItem from="1650810536476" duration="156000" />
-      <workItem from="1651039515276" duration="150000" />
-      <workItem from="1651307867096" duration="889000" />
-      <workItem from="1651308774615" duration="6633000" />
-      <workItem from="1651321276401" duration="249000" />
-      <workItem from="1651324146802" duration="1899000" />
-      <workItem from="1651326198750" duration="775000" />
-      <workItem from="1651328424037" duration="202000" />
-      <workItem from="1651328676251" duration="447000" />
-      <workItem from="1651400310221" duration="1191000" />
-      <workItem from="1651401525029" duration="2641000" />
-      <workItem from="1651429689872" duration="836000" />
-      <workItem from="1651480571544" duration="2923000" />
-      <workItem from="1651484790236" duration="530000" />
-      <workItem from="1651490928510" duration="3943000" />
-      <workItem from="1651495003160" duration="485000" />
-      <workItem from="1651495506306" duration="157000" />
-      <workItem from="1651495773003" duration="312000" />
-      <workItem from="1651496098485" duration="139000" />
-      <workItem from="1651496336050" duration="1133000" />
-      <workItem from="1651498710870" duration="1425000" />
-      <workItem from="1651512203929" duration="275000" />
-      <workItem from="1651567485834" duration="3662000" />
-      <workItem from="1651575381620" duration="1143000" />
-      <workItem from="1651576541961" duration="910000" />
-      <workItem from="1651586172174" duration="143000" />
-      <workItem from="1651586496098" duration="55000" />
-      <workItem from="1651653941980" duration="378000" />
-      <workItem from="1651655585476" duration="38000" />
-      <workItem from="1651655634057" duration="4000" />
-      <workItem from="1651655690467" duration="9000" />
-      <workItem from="1651658094302" duration="142000" />
-      <workItem from="1651678276853" duration="805000" />
-      <workItem from="1651683970744" duration="10000" />
+      <updated>1651691375141</updated>
+      <workItem from="1651691376572" duration="12721000" />
+      <workItem from="1651735153574" duration="10866000" />
     </task>
-    <task id="LOCAL-00001" summary="First GUI, camera bug need to be fixed">
-      <created>1650113852339</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1650113852339</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Fixed gui">
-      <created>1650803967756</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1650803967756</updated>
-    </task>
-    <task id="LOCAL-00003" summary="CNN model and split data to train, test and validation sets">
-      <created>1651404878017</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1651404878017</updated>
-    </task>
-    <task id="LOCAL-00004" summary="CNN model and split data to train, test and validation sets">
-      <created>1651404899449</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1651404899449</updated>
-    </task>
-    <task id="LOCAL-00005" summary="model update">
-      <created>1651485291062</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1651485291062</updated>
-    </task>
-    <task id="LOCAL-00006" summary="text input GUI, update db">
-      <created>1651569484118</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1651569484118</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fix">
-      <created>1651658253978</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1651658253978</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,33 +196,11 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="First GUI, camera bug need to be fixed" />
-    <MESSAGE value="Fixed gui" />
-    <MESSAGE value="CNN model and split data to train, test and validation sets" />
-    <MESSAGE value="model update" />
-    <MESSAGE value="text input GUI, update db" />
-    <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Lego_sorter$Data_Generator__1_.coverage" NAME="Data_Generator (1) Coverage Results" MODIFIED="1651404516741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$Loading_Data.coverage" NAME="Loading_Data Coverage Results" MODIFIED="1651310947178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$Split_Data.coverage" NAME="Split_Data Coverage Results" MODIFIED="1651402360871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1651576662510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/client" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$cam_det.coverage" NAME="cam_det Coverage Results" MODIFIED="1650810616977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model__1_.coverage" NAME="CNN_Model (1) Coverage Results" MODIFIED="1651576747734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model.coverage" NAME="CNN_Model Coverage Results" MODIFIED="1651576362896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$brick_class.coverage" NAME="brick_class Coverage Results" MODIFIED="1651737324339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model.coverage" NAME="CNN_Model Coverage Results" MODIFIED="1651756234985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$prediction.coverage" NAME="prediction Coverage Results" MODIFIED="1651756216784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1651737655651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$Split_Data.coverage" NAME="Split_Data Coverage Results" MODIFIED="1651692358422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 from PIL import ImageChops
 
 
-def compareImages(image1, image2):
+def compare_images(image1, image2):
 
     imageDifference = ImageChops.difference(image1, image2)
     pixels = list(imageDifference.getdata())
