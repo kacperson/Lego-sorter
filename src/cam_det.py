@@ -30,7 +30,7 @@ def cam_det(vid=cv2.VideoCapture(0), width=256, height=256, tolerance=0.005, old
     vid.set(3, width)
     vid.set(4, height)
     oldImg = Image.new("RGB", (width, height))
-
+    brick = -1
 
     ret, newFrame = vid.read()
     newFrame = increase_brightness(newFrame, 40)
@@ -46,10 +46,9 @@ def cam_det(vid=cv2.VideoCapture(0), width=256, height=256, tolerance=0.005, old
         time.sleep(0.3)
         #save picture
         ret, newFrame = vid.read()
-        croppedImg, view = od.object_det(newFrame)
-        cv2.imwrite("../CNN/brick.png", croppedImg)
-    #if cv2.waitKey(1) & 0xFF == ord('q'):
-    #   break
+        brick = od.object_det(newFrame)
 
-    return oldDifferenceIndicator
+
+
+    return oldDifferenceIndicator, brick
 

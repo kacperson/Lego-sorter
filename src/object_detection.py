@@ -1,11 +1,12 @@
 import cv2
+from CNN import prediction
 
 #acceptable opencv format
 def object_det(image):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     binary = cv2.threshold(gray, 110, 255, cv2.THRESH_BINARY_INV)[1]
-
+    brick = -1
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     view = image
     try:
@@ -19,10 +20,11 @@ def object_det(image):
             margin = 10
         image = image[y - margin:y + h + margin, x - margin:x + w + margin]
         image = cv2.resize(image, (64, 64))
-
+        cv2.imwrite("../CNN/brick.png", image)
+        brick = prediction.make_pred("D:\\Lego-sorter\\CNN\\brick.png")
     except ValueError:
         print("Object not detected")
 
-    return image, view
+    return brick
 
 

@@ -17,4 +17,4 @@ def make_pred(image):
     print(prediction)
     return labels[classes[0]]
 
-print(make_pred("D:\\Lego-sorter\\CNN\\brick.png"))
+
