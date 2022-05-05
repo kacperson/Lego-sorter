@@ -63,7 +63,7 @@ def cam_loop(the_q, event):
     oldDifferenceindicator = 0
 
     while True:
-        oldDifferenceindicator = cam_det(cap, oldDifferenceIndicator=oldDifferenceindicator)
+        oldDifferenceindicator, brick = cam_det(cap, oldDifferenceIndicator=oldDifferenceindicator)
         _, img = cap.read()
         if img is not None:
             img = cv2.flip(img, 1)

@@ -8,7 +8,7 @@ def object_det(image):
     binary = cv2.threshold(gray, 110, 255, cv2.THRESH_BINARY_INV)[1]
     brick = -1
     contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    view = image
+
     try:
         c = max(contours, key=cv2.contourArea)
         (x, y, w, h) = cv2.boundingRect(c)
