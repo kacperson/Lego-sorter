@@ -1,5 +1,5 @@
 from tensorflow import keras
-import pickle
+import sklearn
 
 
 data_generator = keras.preprocessing.image.ImageDataGenerator()
@@ -18,11 +18,10 @@ model.add(keras.layers.GlobalAveragePooling2D())
 
 model.summary()
 model.add(keras.layers.Dense(10, activation='softmax'))
-model.compile(optimizer="Adam", loss="categorical_crossentropy", metrics=['accuracy'])
+model.compile(optimizer="Adagrad", loss="categorical_crossentropy", metrics=['accuracy'])
 
-history = model.fit(train, validation_data=validation, validation_steps=8, epochs=100)
+history = model.fit(train, validation_data=validation, validation_steps=8, epochs=1000)
 
 loss = model.evaluate(test, steps=128)
-
-filename = "D:\\Lego-sorter\\CNN\\CNN_Model_final.h5"
+filename = "D:\\Lego-sorter\\CNN\\CNN_Model_final_AGD.h5"
 model.save(filename)

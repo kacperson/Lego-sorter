@@ -12,7 +12,7 @@ class bricksDB:
                            " shelf_number int);"
 
         create_bricks = "CREATE TABLE IF NOT EXISTS Bricks (id_brick INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," \
-                        " brick_number int, qty int);"
+                        " brick_number text, qty int);"
 
         create_assignments = "CREATE TABLE IF NOT EXISTS Assignments (id_assignment INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," \
                              " id_brick int," \
@@ -66,22 +66,26 @@ class bricksDB:
         return
 
     def find_brick(self, brick):
-        select = f"SELECT Bricks.qty, Inventory.shelf_number " \
-                 f"FROM Bricks " \
-                 f"WHERE brick_number = {brick} " \
-                 f"INNER JOIN Assignments ON Bricks.id_brick=Assignments.id_brick " \
-                 f"INNER JOIN Inventory ON Assignments."
+        select = f"SELECT qty, shelf_number FROM Bricks " \
+                 f"INNER JOIN Assignments A on Bricks.id_brick = A.id_brick " \
+                 f"INNER JOIN Inventory I on I.id_shelf = A.id_shelf " \
+                 f"WHERE brick_number = {brick};"
+
         self.stat.execute(select)
-        brickData = self.stat.fetchall()
+        brickData = self.stat.fetchone()
+        self.stat.close()
+        self.stat = self.conn.cursor()
+        return brickData
 
 
 if __name__ == "__main__":
     db = bricksDB()
     db.create_db()
-    db.add_brick(3, 1234)
-    db.add_brick(4, 5678)
-    db.add_shelf(100)
-    db.add_shelf(200)
-    db.assign_brick(200, 1234)
-    db.remove_brick(1234, 100)
-    db.remove_brick(5678)
+    db.add_brick(100, 1111)
+    db.add_brick(200, 2222)
+    db.add_shelf(12)
+    db.add_shelf(13)
+    db.assign_brick(12, 1111)
+    print(db.find_brick(1111))
+    db.add_shelf(14)
+    db.conn.close()
