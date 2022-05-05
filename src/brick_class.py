@@ -1,5 +1,6 @@
 import sqlite3 as sq
 
+
 class bricksDB:
 
     def __init__(self):

@@ -5,6 +5,7 @@ from PIL import Image, ImageTk
 from cam_det import cam_det
 
 
+
 def gui_mainloop(the_q, the_e):
     class MainFrame(tk.Frame):
         def __init__(self, *args, **kwargs):
@@ -39,12 +40,21 @@ def gui_mainloop(the_q, the_e):
             self.camera_label.grid()
 
         def show_frames(self, the_q, the_e):
-            img = the_q.get()
+            img, brick = the_q.get()
             img = Image.fromarray(img)
+            # case = # nazwa pułki danego klocka
             imgtk = ImageTk.PhotoImage(image=img)
+            self.model_text.insert('1.0', brick)
+            # self.case_text.insert('1.0', case)  # dodanie nazwy do textboxa
             self.camera_label.imgtk = imgtk
             self.camera_label.configure(image=imgtk)
             self.camera_label.after(10, self.show_frames, the_q, the_e)
+
+        def get_input(self):
+            model = self.model_text.get("1.0", tk.END)
+            case = self.case_text.get("1.0", tk.END)
+            number = self.number_text.get("1.0", tk.END)
+            # update(model, case, number) # update bazy danych
 
     root = tk.Tk()
     root.title("LEGO sorter")
@@ -68,7 +78,7 @@ def cam_loop(the_q, event):
         if img is not None:
             img = cv2.flip(img, 1)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGBA)
-            the_q.put(img)
+            the_q.put(img, brick)
             event.set()
 
 
@@ -82,7 +92,6 @@ if __name__ == "__main__":
     try:
         p_cap.start()
         p_gui.start()
-
 
         p_cap.join()
         p_gui.join()
