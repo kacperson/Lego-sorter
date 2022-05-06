@@ -3,7 +3,7 @@ import tkinter as tk
 import cv2
 from PIL import Image, ImageTk
 from cam_det import cam_det
-
+import brick_class as bc
 
 
 def gui_mainloop(the_q, the_e):
@@ -30,22 +30,25 @@ def gui_mainloop(the_q, the_e):
             self.model_text.grid(column=1, row=0, columnspan=1)
             self.case_text.grid(column=1, row=1, columnspan=1)
             self.number_text.grid(column=1, row=2, columnspan=1)
-            self.add_button = tk.Button(self.info_container, text="Add to database")
+            self.add_button = tk.Button(self.info_container, text="Add to database", command=self.update_bd)
             self.add_button.grid(column=1, row=3, columnspan=1)
+            self.remove_button = tk.Button(self.info_container, text="Remove from databases", command=self.remove_db)
+            self.remove_button.grid(column=1, row=4, columnspan=1)
 
             self.camera = cv2.VideoCapture(0)
             self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 64)
             self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 64)
             self.camera_label = tk.Label(self.camera_container)
             self.camera_label.grid()
+            self.db = bc.bricksDB()
 
         def show_frames(self, the_q, the_e):
             img, brick = the_q.get()
             img = Image.fromarray(img)
-            # case = # nazwa pułki danego klocka
+            case = self.db.find_brick(brick)
             imgtk = ImageTk.PhotoImage(image=img)
             self.model_text.insert('1.0', brick)
-            # self.case_text.insert('1.0', case)  # dodanie nazwy do textboxa
+            self.case_text.insert('1.0', case)
             self.camera_label.imgtk = imgtk
             self.camera_label.configure(image=imgtk)
             self.camera_label.after(10, self.show_frames, the_q, the_e)
@@ -54,7 +57,15 @@ def gui_mainloop(the_q, the_e):
             model = self.model_text.get("1.0", tk.END)
             case = self.case_text.get("1.0", tk.END)
             number = self.number_text.get("1.0", tk.END)
-            # update(model, case, number) # update bazy danych
+            return model, case, number
+
+        def update_bd(self):
+            model, case, number = self.get_input()
+            # self.db.update(model, case, number)
+
+        def remove_db(self):
+            model, _, number = self.get_input()
+            self.db.remove_brick(model, number)
 
     root = tk.Tk()
     root.title("LEGO sorter")
@@ -95,7 +106,6 @@ if __name__ == "__main__":
 
         p_cap.join()
         p_gui.join()
-
 
     except KeyboardInterrupt:
         p_cap.terminate()
