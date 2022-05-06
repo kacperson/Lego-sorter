@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbaaf938-c6e2-4c5f-8345-b50b651b54ad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1a9a846-c245-4c0f-8133-236fb03ef029.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e1a9a846-c245-4c0f-8133-236fb03ef029.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/brick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/prediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/threads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/brick_database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/brick_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/brick_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
       <recent name="D:\Lego-sorter\CNN\brick" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.GUI">
+  <component name="RunManager" selected="Python.brick_class">
     <configuration name="CNN_Model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,10 +160,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.brick_class" />
         <item itemvalue="Python.GUI" />
         <item itemvalue="Python.prediction" />
         <item itemvalue="Python.CNN_Model" />
-        <item itemvalue="Python.brick_class" />
         <item itemvalue="Python.Split_Data" />
       </list>
     </recent_temporary>
@@ -179,7 +178,7 @@
       <updated>1651691375141</updated>
       <workItem from="1651691376572" duration="12721000" />
       <workItem from="1651735153574" duration="10866000" />
-      <workItem from="1651838561739" duration="4059000" />
+      <workItem from="1651838561739" duration="9983000" />
     </task>
     <servers />
   </component>
@@ -198,7 +197,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Lego_sorter$brick_class.coverage" NAME="brick_class Coverage Results" MODIFIED="1651737324339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$brick_class.coverage" NAME="brick_class Coverage Results" MODIFIED="1651867687753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model.coverage" NAME="CNN_Model Coverage Results" MODIFIED="1651756234985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
     <SUITE FILE_PATH="coverage/Lego_sorter$prediction.coverage" NAME="prediction Coverage Results" MODIFIED="1651839587463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
     <SUITE FILE_PATH="coverage/Lego_sorter$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1651840331201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

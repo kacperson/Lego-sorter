@@ -12,7 +12,7 @@ class bricksDB:
                            " shelf_number int);"
 
         create_bricks = "CREATE TABLE IF NOT EXISTS Bricks (id_brick INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," \
-                        " brick_number text, qty int);"
+                        " brick_number text UNIQUE , qty int);"
 
         create_assignments = "CREATE TABLE IF NOT EXISTS Assignments (id_assignment INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," \
                              " id_brick int," \
@@ -33,7 +33,9 @@ class bricksDB:
         return
 
     def add_brick(self, qty, brickNum):
-        add = f"INSERT INTO Bricks (brick_number, qty) VALUES ({brickNum}, {qty});"
+        add = f"INSERT INTO Bricks(brick_number, qty) VALUES({brickNum},{qty})" \
+              f"ON CONFLICT(brick_number) DO UPDATE SET qty=qty+{qty};"
+
         self.stat.execute(add)
         self.conn.commit()
         return
@@ -83,6 +85,7 @@ if __name__ == "__main__":
     db.create_db()
     db.add_brick(100, 1111)
     db.add_brick(200, 2222)
+    db.add_brick(100, 1111)
     db.add_shelf(12)
     db.add_shelf(13)
     db.assign_brick(12, 1111)
