@@ -43,11 +43,11 @@ def gui_mainloop(the_q, the_e):
             self.db = bc.bricksDB()
 
         def show_frames(self, the_q, the_e):
-            img, brick = the_q.get()
-            img = Image.fromarray(img)
-            case = self.db.find_brick(brick)
+            inputs = the_q.get()
+            img = Image.fromarray(inputs[0])
+            case = self.db.find_brick(inputs[1])
             imgtk = ImageTk.PhotoImage(image=img)
-            self.model_text.insert('1.0', brick)
+            self.model_text.insert('1.0', inputs[1])
             self.case_text.insert('1.0', case)
             self.camera_label.imgtk = imgtk
             self.camera_label.configure(image=imgtk)
@@ -89,7 +89,7 @@ def cam_loop(the_q, event):
         if img is not None:
             img = cv2.flip(img, 1)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGBA)
-            the_q.put(img, brick)
+            the_q.put([img, brick])
             event.set()
 
 
