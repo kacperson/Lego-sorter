@@ -30,7 +30,7 @@ def gui_mainloop(the_q, the_e):
             self.model_text.grid(column=1, row=0, columnspan=1)
             self.case_text.grid(column=1, row=1, columnspan=1)
             self.number_text.grid(column=1, row=2, columnspan=1)
-            self.add_button = tk.Button(self.info_container, text="Add to database", command=self.update_bd)
+            self.add_button = tk.Button(self.info_container, text="Add to database", command=self.update_db)
             self.add_button.grid(column=1, row=3, columnspan=1)
             self.remove_button = tk.Button(self.info_container, text="Remove from databases", command=self.remove_db)
             self.remove_button.grid(column=1, row=4, columnspan=1)
@@ -59,7 +59,7 @@ def gui_mainloop(the_q, the_e):
             number = self.number_text.get("1.0", tk.END)
             return model, case, number
 
-        def update_bd(self):
+        def update_db(self):
             model, case, number = self.get_input()
             # self.db.update(model, case, number)
 
