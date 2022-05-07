@@ -94,6 +94,9 @@ def cam_loop(the_q, event):
 
 
 if __name__ == "__main__":
+    db = bc.bricksDB()
+    db.create_db()
+
     q_frame = multiprocessing.Queue(1)
     e_frame = multiprocessing.Event()
 
@@ -110,4 +113,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         p_cap.terminate()
         p_gui.terminate()
+
 
