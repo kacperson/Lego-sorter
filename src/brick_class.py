@@ -69,7 +69,7 @@ class bricksDB:
         return
 
     def find_brick(self, brick):
-        select = f"SELECT qty, shelf_number FROM Bricks " \
+        select = f"SELECT qty, shelf_number, brick_number FROM Bricks " \
                  f"INNER JOIN Assignments A on Bricks.id_brick = A.id_brick " \
                  f"INNER JOIN Inventory I on I.id_shelf = A.id_shelf " \
                  f"WHERE brick_number = {brick};"
@@ -78,6 +78,9 @@ class bricksDB:
         brickData = self.stat.fetchone()
         self.stat.close()
         self.stat = self.conn.cursor()
+        if brickData == None:
+            brickData = (0, 0, 0)
+        print(brickData)
         return brickData
 
 
