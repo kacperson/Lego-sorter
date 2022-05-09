@@ -43,12 +43,17 @@ def gui_mainloop(the_q, the_e):
             self.db = bc.bricksDB()
 
         def show_frames(self, the_q, the_e):
+
             inputs = the_q.get()
             img = Image.fromarray(inputs[0])
             case = self.db.find_brick(inputs[1])
             imgtk = ImageTk.PhotoImage(image=img)
-            self.model_text.insert('1.0', inputs[1])
-            self.case_text.insert('1.0', case)
+            if inputs[1] != -1:
+                if self.model_text.get("1.0", tk.END) != '' or self.case_text.get("1.0", tk.END) != '':
+                    self.model_text.delete("1.0", tk.END)
+                    self.case_text.delete("1.0", tk.END)
+                self.model_text.insert('1.0', inputs[1])
+                self.case_text.insert('1.0', case[1])
             self.camera_label.imgtk = imgtk
             self.camera_label.configure(image=imgtk)
             self.camera_label.after(10, self.show_frames, the_q, the_e)
@@ -60,7 +65,7 @@ def gui_mainloop(the_q, the_e):
             return model, case, number
 
         def update_db(self):
-            model, case, number = self.get_input()
+            model, number = self.get_input()
             # self.db.update(model, case, number)
 
         def remove_db(self):
@@ -96,6 +101,8 @@ def cam_loop(the_q, event):
 if __name__ == "__main__":
     db = bc.bricksDB()
     db.create_db()
+    for i in range(10):
+        db.add_shelf(i*10)
 
     q_frame = multiprocessing.Queue(1)
     e_frame = multiprocessing.Event()
