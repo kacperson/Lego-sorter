@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PY-213.6777.50">
-    <data-source name="brick_database.db" uuid="e1a9a846-c245-4c0f-8133-236fb03ef029">
+    <data-source name="brick_database.db" uuid="71b95918-66ca-49db-bbdb-86fea3a1120b">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <secret-storage>forget</secret-storage>
+      <schema-mapping />
+    </data-source>
+    <data-source name="brick_database.db [2]" uuid="de5804a9-3766-4626-9b4a-58e4f64c26e5">
       <database-info product="SQLite" version="3.36.0" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.36.0.3" dbms="SQLITE" exact-version="3.36.0" exact-driver-version="3.36">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbaaf938-c6e2-4c5f-8345-b50b651b54ad" name="Changes" comment="">
+    <list default="true" id="e6abb871-26d5-44b2-bad9-7dc2be79fa55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/database/generate_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Lego-sorter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lego-sorter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1a9a846-c245-4c0f-8133-236fb03ef029.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/CNN_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/CNN_Model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/CNN_Model_final_Adam.h5" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/CNN_Model_final_Adam.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/brick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/brick_database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/brick_database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/brick_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/brick_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/object_detection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +37,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="28iFCzCUtKxEmcvZAKyVdNSE5wA" />
+  <component name="ProjectId" id="28pWwYp7buWeZjo4VZmoRQp5pTE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,20 +46,9 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CNN" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Lego-sorter\CNN" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Lego-sorter\CNN" />
-      <recent name="D:\Lego-sorter\CNN\brick" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.brick_class">
+  <component name="RunManager" selected="Python.generate_db">
     <configuration name="CNN_Model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Split_Data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="generate_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lego-sorter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,12 +101,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CNN" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/database" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CNN/Split_Data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/database/generate_db.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,78 +115,24 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="brick_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lego-sorter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/brick_class.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="prediction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lego-sorter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CNN" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CNN/prediction.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.brick_class" />
-      <item itemvalue="Python.prediction" />
-      <item itemvalue="Python.CNN_Model" />
-      <item itemvalue="Python.GUI" />
-      <item itemvalue="Python.Split_Data" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.brick_class" />
+        <item itemvalue="Python.generate_db" />
         <item itemvalue="Python.GUI" />
-        <item itemvalue="Python.prediction" />
         <item itemvalue="Python.CNN_Model" />
-        <item itemvalue="Python.Split_Data" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dbaaf938-c6e2-4c5f-8345-b50b651b54ad" name="Changes" comment="" />
-      <created>1651691375141</created>
+      <changelist id="e6abb871-26d5-44b2-bad9-7dc2be79fa55" name="Changes" comment="" />
+      <created>1651914246375</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1651691375141</updated>
-      <workItem from="1651691376572" duration="12721000" />
-      <workItem from="1651735153574" duration="10866000" />
-      <workItem from="1651838561739" duration="9983000" />
+      <updated>1651914246375</updated>
+      <workItem from="1651914248046" duration="5089000" />
+      <workItem from="1652007703952" duration="7096000" />
     </task>
     <servers />
   </component>
@@ -203,14 +151,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Lego_sorter$prediction.coverage" NAME="prediction Coverage Results" MODIFIED="1651756216784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$Data_Generator__1_.coverage" NAME="Data_Generator (1) Coverage Results" MODIFIED="1651404516741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$Loading_Data.coverage" NAME="Loading_Data Coverage Results" MODIFIED="1651310947178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$Split_Data.coverage" NAME="Split_Data Coverage Results" MODIFIED="1651402360871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1651855268964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$brick_class.coverage" NAME="brick_class Coverage Results" MODIFIED="1651737324339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$cam_det.coverage" NAME="cam_det Coverage Results" MODIFIED="1650810616977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model__1_.coverage" NAME="CNN_Model (1) Coverage Results" MODIFIED="1651576747734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
-    <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model.coverage" NAME="CNN_Model Coverage Results" MODIFIED="1651576362896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$generate_db.coverage" NAME="generate_db Coverage Results" MODIFIED="1652101583001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/database" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$CNN_Model.coverage" NAME="CNN_Model Coverage Results" MODIFIED="1652011526596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CNN" />
+    <SUITE FILE_PATH="coverage/Lego_sorter$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1652012986406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

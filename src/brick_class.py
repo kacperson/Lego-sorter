@@ -21,15 +21,9 @@ class bricksDB:
                              " FOREIGN KEY (id_brick) REFERENCES Bricks (id_brick)," \
                              " FOREIGN KEY (id_shelf) REFERENCES Inventory (id_shelf));"
 
-        create_images = "CREATE TABLE IF NOT EXISTS Images (id_image INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," \
-                        " id_brick int ," \
-                        " img_path string," \
-                        " FOREIGN KEY (id_brick) REFERENCES Bricks(id_brick));"
-
         self.stat.execute(create_inventory)
         self.stat.execute(create_bricks)
         self.stat.execute(create_assignments)
-        self.stat.execute(create_images)
         self.conn.commit()
         return
 
@@ -69,7 +63,7 @@ class bricksDB:
         return
 
     def find_brick(self, brick):
-        select = f"SELECT qty, shelf_number, brick_number FROM Bricks " \
+        select = f"SELECT qty, shelf_number FROM Bricks " \
                  f"INNER JOIN Assignments A on Bricks.id_brick = A.id_brick " \
                  f"INNER JOIN Inventory I on I.id_shelf = A.id_shelf " \
                  f"WHERE brick_number = {brick};"
