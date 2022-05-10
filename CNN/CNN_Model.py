@@ -21,7 +21,7 @@ model.summary()
 model.add(keras.layers.Dense(10, activation='softmax'))
 model.compile(optimizer="Adam", loss="categorical_crossentropy", metrics=['accuracy'])
 
-history = model.fit(train, validation_data=validation, validation_steps=16, epochs=200, batch_size=3)
+history = model.fit(train, validation_data=validation, validation_steps=16, epochs=200, batch_size=2)
 
 loss = model.evaluate(test, steps=128)
 filename = "D:\\Lego-sorter\\CNN\\CNN_Model_final_Adam.h5"
