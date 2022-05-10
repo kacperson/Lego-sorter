@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6abb871-26d5-44b2-bad9-7dc2be79fa55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/CNN_Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/CNN_Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/CNN_Model_final_Adam.h5" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/CNN_Model_final_Adam.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CNN/brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/brick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/brick_database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/brick_database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cam_det.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cam_det.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +143,7 @@
       <workItem from="1651914248046" duration="5089000" />
       <workItem from="1652007703952" duration="7149000" />
       <workItem from="1652108907045" duration="2727000" />
-      <workItem from="1652161726753" duration="8064000" />
+      <workItem from="1652161726753" duration="8230000" />
     </task>
     <servers />
   </component>
