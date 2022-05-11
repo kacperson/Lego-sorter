@@ -76,17 +76,3 @@ class bricksDB:
             brickData = (0, 0, 0)
         print(brickData)
         return brickData
-
-
-if __name__ == "__main__":
-    db = bricksDB()
-    db.create_db()
-    db.add_brick(100, 1111)
-    db.add_brick(200, 2222)
-    db.add_brick(100, 1111)
-    db.add_shelf(12)
-    db.add_shelf(13)
-    db.assign_brick(12, 1111)
-    print(db.find_brick(1111))
-    db.add_shelf(14)
-    db.conn.close()

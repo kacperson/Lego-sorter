@@ -1,5 +1,4 @@
 from tensorflow import keras
-import sklearn
 
 
 data_generator = keras.preprocessing.image.ImageDataGenerator()

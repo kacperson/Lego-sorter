@@ -65,8 +65,8 @@ def gui_mainloop(the_q, the_e):
             return model, case, number
 
         def update_db(self):
-            model, number = self.get_input()
-            # self.db.update(model, case, number)
+            model, _, number = self.get_input()
+            self.db.add_brick(number, model)
 
         def remove_db(self):
             model, _, number = self.get_input()
@@ -99,10 +99,6 @@ def cam_loop(the_q, event):
 
 
 if __name__ == "__main__":
-    db = bc.bricksDB()
-    db.create_db()
-    for i in range(10):
-        db.add_shelf(i*10)
 
     q_frame = multiprocessing.Queue(1)
     e_frame = multiprocessing.Event()
